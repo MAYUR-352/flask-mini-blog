@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from werkzeug.utils import secure_filename
 import os
 from datetime import datetime
-from models import db, Post, Comment
+from miniblog.models import db, Post, Comment
 
 app = Flask(__name__)
 
