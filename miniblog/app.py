@@ -14,9 +14,10 @@ if not os.path.exists(INSTANCE_FOLDER):
     os.makedirs(INSTANCE_FOLDER)
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv(
-    "SQLALCHEMY_DATABASE_URI", f"sqlite:///{db_path}"
-)
+# app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv(
+#     "SQLALCHEMY_DATABASE_URI", f"sqlite:///{db_path}"
+#     )
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL", "sqlite:///local.db")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.secret_key = os.getenv("SECRET_KEY", "supersecretkey")
 
