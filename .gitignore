@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment
+.env
+.venv/
+
+# Database
+miniblog/instance/database.db
+
+# VSCode
+.vscode/
+
+*.log
+docker-compose.override.yml
